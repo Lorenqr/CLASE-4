@@ -28,6 +28,12 @@ app.put('/usuarios/:id', (req, res) => {
     res.send('Se actualizo el usuarios')
 });
 
+app.delete('/usuarios/:id', (req, res) => {
+    const idusuario = req.params.id
+    console.log(`El usuario con id ${idusuario} fue eliminado`)
+    res.send('Se elimino el usuario')
+
+})
 
 app.listen(puerto, () => {
     console.log(`Servidor esperando solicitud ${puerto}`)
