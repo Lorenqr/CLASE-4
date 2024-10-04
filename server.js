@@ -22,6 +22,11 @@ app.post('/usuarios', (req, res) => {
     res.send('Se ha creado un usuario');
 });
 
+app.put('/usuarios/:id', (req, res) => {
+    const idusuario = req.params.id
+    console.log(`El usuario con id ${idusuario} fue actualizado`)
+    res.send('Se actualizo el usuarios')
+})
 
 
 app.listen(puerto, () => {
